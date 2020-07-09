@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="utf-8" />
+    <title>Klipper &mdash; Oleme Teile toeks veebialastel väljakutsetel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
+    <meta name="description" content="Veeb - see on imelihtne? Kui nii ei tundu, aitame teid hea meelega jõu ja nõuga." />
+    <script type="application/ld+json">{ "@context" : "http://schema.org", "@type" : "Organization", "name" : "Klipper OÜ", "url" : "http://klipper.ee", "description" : "Valmistame nii staatilisi kui ka dünaamilisi veebilahendusi (kodulehekülgi). Hea meelega aitame Teid PSD-st valmistada nii kasutaja- kui ka otsingumootorisõbraliku HTML-i. Kui sellest ei piisa, saame aidata ka seda siduda WordPress CMS-iga. Omame üle 4 aasta WordPressile arendamise kogemust." } </script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' />
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Lato', sans-serif;
+            background-color: #D1DBDD;
+            color: #111;
+        }
+        .jumbotron {
+            position: relative;
+            width: 100%;
+            min-height: 600px;
+            height: 100vh;
+            background: url('bg02.jpg?ch=Width,DPR') 0 60% no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+        }
+
+        .jumbotron::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            content: '\00ad';
+            box-shadow: inset 0 0 12rem rgba(0,0,0,.12);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .jumbotron-article {
+            position: absolute;
+            right: 60px;
+            bottom: 60px;
+            padding: 60px;
+            color: #555;
+            width: 300px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, .85);
+            border-radius: 2px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, .12);
+            border: 1px solid rgba(255, 255, 255, .95);
+            transition: transform 6s cubic-bezier(0, .94, 0, .94) .25s, opacity .45s ease-in .25s;
+            transform: translateY(200px);
+            opacity: 0;
+        }
+
+        .jumbotron-article.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: .47em;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 1.47em;
+            margin-bottom: .8em;
+        }
+
+        p {
+            margin-top: .47em;
+            margin-bottom: 0;
+        }
+
+        .contact {
+            margin-top: 1.47em;
+        }
+
+        .slogan,
+        .tags {
+            font-size: 15px;
+        }
+
+        .slogan {
+            font-style: italic;
+            margin-bottom: .47em;
+            line-height: 1.37;
+        }
+
+        .tags {
+            margin-top: 1.47em;
+            margin-bottom: 1.47em;
+        }
+
+        .sep {
+            display: block;
+            height: 0;
+            overflow: hidden;
+            margin-top: .4em;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 767px) {
+            .jumbotron-article {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                padding: 30px;
+                width: 240px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+        }
+
+        @media (min-width: 768px) {
+            .partners {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .partners > a {
+                display: block;
+            }
+            .partners > a + a {
+                margin-top: 15px;
+            }
+        }
+    </style>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-67684794-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <div class="jumbotron">
+        <article class="jumbotron-article">
+            <h1>Klipper OÜ</h1>
+            <p class="slogan">Oleme Teile toeks veebialastel väljakutsetel</p>
+            <p class="tags">Konsultatsioon <span class="sep">&middot;</span> Koolitamine</p>
+            <p>Reg: 12912172</p>
+            <p>IBAN: EE322200221062739172</p>
+            <p class="contact"><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;">&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;</a></p>
+            <h2>Partnerid</h2>
+            <p class="partners">
+                <a href="https://www.loomdigital.ee" target="_blank"><img src="loom-logo.png" alt="LOOM Digital" height="35"></a>
+                <a href="https://www.artun.ee/avatud-akadeemia/veebidisain/" target="_blank"><img src="artun-logo.svg" alt="Eesti Kunstiakadeemia" height="35"></a>
+                <a href="https://www.tlu.ee/haapsalu/rakendusinformaatika" target="_blank"><img src="tlu-logo.svg" alt="Tallinna Ülikool Haapsalu kolledž" height="35"></a>
+                <a href="http://www.rik.ee" target="_blank"><img src="rik-logo.png" alt="Registri ja Infosüsteemide Keskus" height="35"></a>
+            </p>
+        </article>
+    </div>
+    <script type="text/javascript">
+        window.onload = function() {
+            var jumbotron = document.body.querySelector(".jumbotron-article");
+            jumbotron.classList.add('in');
+        };
+    </script>
+</body>
+</html>
