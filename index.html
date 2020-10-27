@@ -2,14 +2,14 @@
 <html lang="et">
 <head>
     <meta charset="utf-8" />
-    <title>💡 Klipper &mdash; Viime otsad kokku</title>
+    <title>💡 Klipper &mdash; Ühendame otsad</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
-    <meta name="description" content="Veeb - see on imelihtne? Oleme veebitarkvara insenerid, kes aitavad otsi kokku viia." />
+    <meta name="description" content="Veeb - see on imelihtne? Oleme veebitarkvara insenerid, kes aitavad ühendada otsad." />
     <meta property="og:image" content="https://klipper.ee/klipper-og.jpg" />
     <meta property="og:image:width" content="1500" />
     <meta property="og:image:height" content="780" />
-    <script type="application/ld+json">{ "@context" : "http://schema.org", "@type" : "Organization", "name" : "Klipper OÜ", "url" : "https://klipper.ee", "description" : "Veebitarkvara insenerid, kes aitavad otsi kokku viia." } </script>
+    <script type="application/ld+json">{ "@context" : "http://schema.org", "@type" : "Organization", "name" : "Klipper OÜ", "url" : "https://klipper.ee", "description" : "Veebitarkvara insenerid, kes aitavad ühendada otsad." } </script>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' />
     <style type="text/css">
         html, body {
@@ -33,6 +33,12 @@
                 font-size: 18px;
             }
         }
+
+        body {
+            position: relative;
+
+        }
+
         .jumbotron {
             position: relative;
             width: 100%;
@@ -46,18 +52,19 @@
             justify-content: center;
             padding: 30px;
             box-sizing: border-box;
+            z-index: 2;
         }
 
-        .jumbotron::after {
+        .jumbotron::before {
             position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
             left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
             content: '\00ad';
-            box-shadow: inset 0 0 12rem rgba(0,0,0,.12);
-            pointer-events: none;
-            z-index: 1;
+            background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(178,178,178,0.22) 31.2%, rgba(65,65,65,0.55) 78.83%, rgba(20,20,20,0.7) 100%);
+            mix-blend-mode: multiply;
+            opacity: .55;
         }
 
         .jumbotron-article {
@@ -78,7 +85,7 @@
 
         @media (min-width: 992px) {
             .jumbotron-article {
-                padding: 5%;
+                padding: 4rem;
             }
         }
 
@@ -94,7 +101,7 @@
         }
 
         h2 {
-            font-size: 18px;
+            font-size: 16px;
             margin-top: 1.47em;
             margin-bottom: .8em;
         }
@@ -126,10 +133,9 @@
         }
 
         .sep {
-            display: block;
-            height: 0;
-            overflow: hidden;
-            margin-top: .4em;
+            padding-left: 7px;
+            padding-right: 7px;
+            opacity: .55;
         }
 
         a {
@@ -158,10 +164,10 @@
 
         .partners {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 1rem 3rem;
         }
 
         .mb-2 {
@@ -178,40 +184,31 @@
         }
 
         .refs {
-            padding-top: 2rem;
+            padding-top: 1rem;
         }
 
 
     </style>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-67684794-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
 </head>
 <body>
     <div class="jumbotron">
         <article class="jumbotron-article">
             <h1>Klipper OÜ</h1>
-            <p class="slogan">Veebitarkvara insenerid, kelle kirg on otsi kokku viia.</p>
-            <p class="tags">Konsultatsioon <span class="sep">&middot;</span> Koolitus <span class="sep">&middot;</span> Arendus</p>
-            <p class="contact mb-2"><span class="mr-1">📬</span> <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;">&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;</a></p>
+            <p class="slogan mb-2">Veebitarkvara insenerid</p>
+            <h2>Tehnoloogiad</h2>
+            <p class="mb-2">Vue <span class="sep">/</span> NuxtJS <span class="sep">/</span> PHP <span class="sep">/</span> WordPress</p>
             <h2>Partnerid</h2>
             <p class="partners mb-2">
                 <a href="https://www.bind.ee" target="_blank"><img src="bind-logo.svg" alt="Bind" width="70"></a>
-                <a href="https://www.loomdigital.ee" target="_blank"><img src="loom-logo.png" alt="LOOM Digital" height="35"></a>
-                <a href="https://www.artun.ee/avatud-akadeemia/veebidisain/" target="_blank"><img src="artun-logo.svg" alt="Eesti Kunstiakadeemia" height="35"></a>
-                <a href="https://www.tlu.ee/haapsalu/rakendusinformaatika" target="_blank"><img src="tlu-logo.svg" alt="Tallinna Ülikool Haapsalu kolledž" height="35"></a>
-                <a href="http://www.rik.ee" target="_blank"><img src="rik-logo.png" alt="Registri ja Infosüsteemide Keskus" height="35"></a>
+                <a href="https://www.loomdigital.ee" target="_blank"><img src="loom-logo.png" alt="LOOM Digital" height="28"></a>
+                <a href="https://www.hektor.ee" target="_blank"><img src="hektor-light-logo.svg" alt="Hektor Light" height="48"></a>
+                <a href="https://www.itella.ee" target="_blank"><img src="itella-logo.svg" alt="Itella" height="22"></a>
+                <a href="https://www.artun.ee/avatud-akadeemia/veebidisain/" target="_blank"><img src="artun-logo.svg" alt="Eesti Kunstiakadeemia" height="40"></a>
             </p>
             <div class="refs">
+                <p class="mb-2"><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;">&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;</a></p>
                 <p><small>Reg: 12912172</small></p>
-                <p><small>IBAN: EE322200221062739172</small></p>
+                <p><small>IBAN: EE897700771005354514 (LHV)</small></p>
             </div>
         </article>
     </div>
