@@ -15,7 +15,7 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
+            min-height: 100vh;
             font-family: 'Lato', sans-serif;
             background-color: #D1DBDD;
             color: #111;
@@ -42,21 +42,18 @@
         .jumbotron {
             position: relative;
             width: 100%;
-            min-height: 600px;
-            height: 100vh;
-            background: url('bg04.jpg?ch=Width,DPR') 50% 60% no-repeat;
+            min-height: 100vh;
+            background: url('bg04.jpg?ch=Width,DPR') 50% 60% fixed no-repeat;
             background-size: cover;
-            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 30px;
             box-sizing: border-box;
             z-index: 2;
         }
 
         .jumbotron::before {
-            position: absolute;
+            position: fixed;
             left: 0;
             top: 0;
             right: 0;
@@ -68,6 +65,7 @@
         }
 
         .jumbotron-article {
+            margin: 60px 20px;
             padding: 30px;
             color: #555;
             width: 100%;
@@ -170,8 +168,8 @@
         }
 
         .partners img {
-            margin-right: 3rem;
-            margin-bottom: 1.2rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
         }
 
         .mb-2 {
@@ -187,17 +185,13 @@
             margin-bottom: 0;
         }
 
-        .refs {
-            padding-top: 1rem;
-        }
-
 
     </style>
 </head>
 <body>
     <div class="jumbotron">
         <article class="jumbotron-article">
-            <h1>Klipper OÜ</h1>
+            <h1>Klipper</h1>
             <p class="slogan mb-2">Veebitarkvara insenerid</p>
             <h2>Tehnoloogiad</h2>
             <p class="mb-2">Vue <span class="sep">/</span> NuxtJS <span class="sep">/</span> PHP <span class="sep">/</span> WordPress</p>
@@ -209,10 +203,18 @@
                 <a href="https://www.itella.ee" target="_blank"><img src="itella-logo.svg" alt="Itella" height="22" style="height: 1.37rem"></a>
                 <a href="https://www.artun.ee/avatud-akadeemia/veebidisain/" target="_blank"><img src="artun-logo.svg" alt="Eesti Kunstiakadeemia" height="40" style="height: 2.5rem"></a>
             </p>
+            <h2>Aitame</h2>
+            <p class="mb-2">
+                <a href="https://edumus.org" target="_blank"><img src="edumus_logo_pink.png" alt="Edumus" width="70" style="width: 5rem"></a>
+            </p>
+            <h2>Jagame</h2>
+            <p class="mb-1"><small>(GitHub): <a href="https://github.com/taunoha/wp-plugin-vue-boilerplate" target="_blank"><b>wp-vue-plugin-boilerplate</b></a></small></p>
+            <p class="mb-2"><small>(Codepen): <a href="https://codepen.io/taunoha/" target="_blank"><b>pens/projects</b></a></small></p>
             <div class="refs">
                 <p class="mb-2"><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;?subject=Kirjutan teile Klipper.ee veebilehelt">&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;</a></p>
+                <p><small>Klipper OÜ</small></p>
                 <p><small>Reg: 12912172</small></p>
-                <p><small>IBAN: EE897700771005354514 (LHV)</small></p>
+                <p><small>IBAN: EE897700771005354514 (LHV pank)</small></p>
             </div>
         </article>
     </div>
