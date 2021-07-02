@@ -71,15 +71,14 @@
             margin: 60px 20px;
             padding: 30px;
             color: #555;
-            width: 100%;
             max-width: 400px;
             font-size: 18px;
             background: rgba(255, 255, 255, .85);
             border-radius: 2px;
             box-shadow: 0 0 50px rgba(0, 0, 0, .12);
             border: 1px solid rgba(255, 255, 255, .95);
-            transition: transform 6s cubic-bezier(0, .94, 0, .94) .25s, opacity .45s ease-in .25s;
-            transform: translateY(200px);
+            transition: opacity .45s ease-in .25s;
+            transform: translate3d(0,0,0);
             transform-origin: 50% 50%;
             opacity: 0;
         }
@@ -92,7 +91,6 @@
 
         .jumbotron-article.in {
             opacity: 1;
-            transform: translateY(0);
         }
 
         h1 {
@@ -188,46 +186,80 @@
             margin-bottom: 0;
         }
 
+        .gmap {
+            position: relative;
+            margin: -30px;
+            margin-bottom: 30px;
+        }
+
+        .gmap::before {
+            display: block;
+            height: 0;
+            padding-bottom: 72%;
+            content: '\00ad';
+        }
+
+        .gmap iframe {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (min-width: 992px) {
+            .gmap {
+                margin: -4rem;
+                margin-bottom: 4rem;
+            }
+        }
+
 
     </style>
 </head>
 <body>
     <div class="jumbotron">
-        <article class="jumbotron-article">
-            <h1>Klipper</h1>
-            <p class="slogan mb-2">Veebitarkvara insenerid.<small style="color: #999; display: block; padding-top: 4px;">Soovime olla partner sinu veebitehnoloogilistel rännakutel. Oleme kaasamõtlejad, pakume lahendusi. Mõnikord võivad need olla hoopis midagi muud kui see, millest juttu alustasime. Aitame sul probleemide asemel näha võimalusi.</small></p>
-            <h2>Võtmetehnoloogiad</h2>
-            <p class="mb-2">
-                Vue <span class="sep">/</span> NuxtJS <span class="sep">/</span> PHP <span class="sep">/</span> WordPress
-                <span class="slogan"><small style="color: #999; display: block; padding-top: 6px;">Erialalist kogemust juba 20+ aastat. 🙀 </small></span>
-            </p>
-            <h2>Partnerid</h2>
-            <p class="partners">
-                <a href="https://www.bind.ee" target="_blank"><img src="bind-logo.svg" alt="Bind" width="70" style="width: 4rem"></a>
-                <a href="https://www.loomdigital.ee" target="_blank"><img src="loom-logo.png" alt="LOOM Digital" style="height: 1.73rem"></a>
-                <a href="https://www.hektor.ee" target="_blank"><img src="hektor-light-logo.svg" alt="Hektor Light" height="48" style="height: 3rem"></a>
-                <a href="https://www.itella.ee" target="_blank"><img src="itella-logo.svg" alt="Itella" height="22" style="height: 1.37rem"></a>
-                <a href="https://www.artun.ee/avatud-akadeemia/veebidisain/" target="_blank"><img src="artun-logo.svg" alt="Eesti Kunstiakadeemia" height="40" style="height: 2.5rem"></a>
-            </p>
-            <h2>Aitame</h2>
-            <p class="mb-2">
-                <a href="https://edumus.org" target="_blank"><img src="edumus_logo_pink.png" alt="Edumus" width="70" style="width: 5rem"></a>
-            </p>
-            <h2>Jagame</h2>
-            <p class="mb-2"><a href="https://github.com/taunoha/" target="_blank">GitHub</a> <span class="sep">/</span> <a href="https://codepen.io/taunoha/" target="_blank">Codepen</a></p>
-            <div class="refs">
-                <p class="mb-2"><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;?subject=Kirjutan teile Klipper.ee veebilehelt">&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;</a></p>
-                <p><small>Klipper OÜ</small></p>
-                <p><small>Reg. nr: 12912172</small></p>
-                <p><small>KMKR nr: EE102381261</small></p>
-                <p><small>IBAN: EE897700771005354514 (LHV pank)</small></p>
+        <article>
+            <div class="jumbotron-article">
+                <h1>Klipper</h1>
+                <p class="slogan mb-2">Veebitarkvara insenerid.<small style="color: #999; display: block; padding-top: 4px;">Soovime olla partner sinu veebitehnoloogilistel rännakutel. Oleme kaasamõtlejad, pakume lahendusi. Mõnikord võivad need olla hoopis midagi muud kui see, millest juttu alustasime. Aitame sul probleemide asemel näha võimalusi.</small></p>
+                <h2>Võtmetehnoloogiad</h2>
+                <p class="mb-2">
+                    Vue <span class="sep">/</span> NuxtJS <span class="sep">/</span> PHP <span class="sep">/</span> WordPress
+                    <span class="slogan"><small style="color: #999; display: block; padding-top: 6px;">Erialalist kogemust juba 20+ aastat. 🙀 </small></span>
+                </p>
+                <h2>Partnerid</h2>
+                <p class="partners">
+                    <a href="https://www.bind.ee" target="_blank"><img src="bind-logo.svg" alt="Bind" width="70" style="width: 4rem"></a>
+                    <a href="https://www.loomdigital.ee" target="_blank"><img src="loom-logo.png" alt="LOOM Digital" style="height: 1.73rem"></a>
+                    <a href="https://www.hektor.ee" target="_blank"><img src="hektor-light-logo.svg" alt="Hektor Light" height="48" style="height: 3rem"></a>
+                    <a href="https://www.itella.ee" target="_blank"><img src="itella-logo.svg" alt="Itella" height="22" style="height: 1.37rem"></a>
+                    <a href="https://www.artun.ee/avatud-akadeemia/veebidisain/" target="_blank"><img src="artun-logo.svg" alt="Eesti Kunstiakadeemia" height="40" style="height: 2.5rem"></a>
+                </p>
+                <h2>Aitame</h2>
+                <p class="mb-2">
+                    <a href="https://edumus.org" target="_blank"><img src="edumus_logo_pink.png" alt="Edumus" width="70" style="width: 5rem"></a>
+                </p>
+                <h2>Jagame</h2>
+                <p class="mb-2"><a href="https://github.com/taunoha/" target="_blank">GitHub</a> <span class="sep">/</span> <a href="https://codepen.io/taunoha/" target="_blank">Codepen</a></p>
+                <h2>Kontakt</h2>
+                <p><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;?subject=Kirjutan teile Klipper.ee veebilehelt">&#105;&#110;&#102;&#111;&#064;&#107;&#108;&#105;&#112;&#112;&#101;&#114;&#046;&#101;&#101;</a></p>
+            </div>
+            <div class="jumbotron-article">
+                <div class="gmap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1189.839875312021!2d24.759864663261677!3d59.4331113733654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929351a2b1f601%3A0x61fa9d4069858dd9!2sUMA%20Maakri!5e0!3m2!1sen!2see!4v1625230043831!5m2!1sen!2see" style="border:0;" allowfullscreen loading="lazy"></iframe></div>
+                <div class="refs">
+                    <p><small><b>Klipper OÜ</b></small></p>
+                    <p><small>Reg. nr: 12912172</small></p>
+                    <p><small>KMKR nr: EE102381261</small></p>
+                    <p><small>IBAN: EE897700771005354514 (LHV pank)</small></p>
+                </div>
             </div>
         </article>
     </div>
     <script type="text/javascript">
         window.onload = function() {
-            var jumbotron = document.body.querySelector(".jumbotron-article");
-            jumbotron.classList.add('in');
+            var jumbotrons = document.body.querySelectorAll(".jumbotron-article");
+            jumbotrons.forEach( (el) => el.classList.add('in') );
         };
     </script>
 </body>
